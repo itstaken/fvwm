@@ -19,11 +19,7 @@
 #  
 #################
 
-#####
-# Set $FVWM_USERDIR and ImagePath
-###########
-SetEnv FVWM_USERDIR $[HOME]/.fvwm
-ImagePath $[FVWM_USERDIR]/images:+
+ImagePath images:+
 
 #######
 # 1: Functions
@@ -34,7 +30,6 @@ ImagePath $[FVWM_USERDIR]/images:+
 ###########
 DestroyFunc StartFunction
 AddToFunc StartFunction
-
 
 #####
 # Functions
@@ -244,7 +239,6 @@ AddToMenu MenuFvwmManPages "Help" Title
 + "FvwmProxy"           ViewManPage FvwmProxy
 + "FvwmRearrange"       ViewManPage FvwmRearrange
 + "FvwmScript"          ViewManPage FvwmScript
-+ "FvwmScroll"          ViewManPage FvwmScroll
 + "" Nop
 + "fvwm-root"	        ViewManPage fvwm-root
 + "fvwm-menu-desktop"   ViewManPage fvwm-menu-desktop
@@ -319,8 +313,6 @@ Mouse 3	STI  A Menu MenuWindowOps
 Mouse 4	T    A MoveClickX Nop Raise "WindowShade True"
 Mouse 5	T    A MoveClickX Nop Raise "WindowShade False"
 
-
-
 #######
 # 6: Decor
 #############
@@ -374,5 +366,3 @@ AddToDecor FvwmDecor
 ###########
 DestroyModuleConfig FvwmIdent: *
 *FvwmIdent: Colorset 5
-
-
